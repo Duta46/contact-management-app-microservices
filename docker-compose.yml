@@ -20,6 +20,8 @@ services:
       DB_PASSWORD: root
     depends_on:
       - mysql
+    volumes:
+    - ./auth-service:/var/www/html
 
   # Laravel Contact Service
   contact-service:
@@ -40,6 +42,8 @@ services:
       DB_PASSWORD: root
     depends_on:
       - mysql
+    volumes:
+    - ./contact-service:/var/www/html
 
   # React Frontend
   frontend:
